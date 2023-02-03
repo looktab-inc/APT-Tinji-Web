@@ -2,11 +2,16 @@ import React, { createContext, useEffect, useState } from "react";
 
 export const AppContext = createContext({} as any);
 
-const { aptos } = typeof window !== "undefined" ? window : {};
 
-export const AppProvider: React.FC = ({ children }) => {
+
+type AppProps = {
+  children: React.ReactNode; // 👈️ type children
+};
+
+export const AppProvider = (props: AppProps) => {
   const [account, setAccount] = useState<any>(null);
   const [error, setError] = useState<any>("");
+  const aptos = typeof window !== "undefined" ? (window as any).aptos : {};
 
   const checkAptos = () => {
     if (!aptos) {
@@ -59,7 +64,7 @@ export const AppProvider: React.FC = ({ children }) => {
     <AppContext.Provider
       value={{ account, connectWallet, disconnectWallet, error }}
     >
-      {children}
+      {props.children}
     </AppContext.Provider>
   );
 };

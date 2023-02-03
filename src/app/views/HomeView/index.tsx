@@ -66,14 +66,14 @@ const Campaigns = [UserInfo1, UserInfo2];
 export const HomeView: FC = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [page, setPage] = useState("dashboard");
-  const [activeCampaign, setActiveCampaign] = useState<number>([]);
+  const [activeCampaign, setActiveCampaign] = useState([]);
   const [endDate, setEndDate] = useState<Date>(new Date());
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [nftTap, setNftTap] = useState("1");
 
   const [nftTitle, setNftTitle] = useState("");
   const [nftDescription, setNftDescription] = useState("");
-  const [nftImage, setNftImage] = useState("");
+  const [nftImage, setNftImage] = useState(null);
   const [zip, setZip] = useState("");
   const [address, setAddress] = useState("");
   const [range, setRange] = useState(0);
@@ -221,7 +221,6 @@ export const HomeView: FC = () => {
     return (
       <>
         <Navigator
-          isLogin={isLogin}
           account={account}
           disconnectWallet={disconnectWallet}
         />
@@ -438,7 +437,10 @@ export const HomeView: FC = () => {
   if (page === "nft") {
     return (
       <>
-        <Navigator isLogin={account} account={account} />
+        <Navigator
+          account={account}
+          disconnectWallet={disconnectWallet}
+        />
         <div className="flex flex-col px-[100px] mt-[48px] mb-[100px]">
           <div className="flex flex-row justify-between h-[60px]">
             <div className="flex flex-row">

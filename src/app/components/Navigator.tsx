@@ -1,14 +1,11 @@
 import { FC, useState } from "react";
-import { useHistory } from "react-router-dom";
 import Image from "next/image";
 
 type Props = {
-  isLogin: boolean;
   account: any;
   disconnectWallet: any;
 };
 export const Navigator: FC<Props> = ({
-  isLogin,
   account,
   disconnectWallet,
 }) => {
@@ -43,7 +40,7 @@ export const Navigator: FC<Props> = ({
             />
           </div>
         ) : (
-          <div className="ml-[10px] font-bold text-[16px]">{isLogin}</div>
+          <div className="ml-[10px] font-bold text-[16px]">{}</div>
         )}
       </div>
     </>

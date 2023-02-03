@@ -40,15 +40,15 @@ export interface Props {
   disabled?: boolean;
   readOnly?: boolean;
   buttonOnly?: boolean;
-  value?: Date | string;
-  onClick?(e: React.MouseEvent<HTMLElement>): void;
+  value?: any;
+  onClick? : any;
   InputProps?: any;
 }
 
 const CustomInput = React.forwardRef<HTMLElement, Props>(
   ({ value, onClick, disabled, readOnly, buttonOnly, ...props }, ref) => {
     return (
-      <InputWrapper ref={ref} {...props}>
+      <InputWrapper {...props}>
         <Input value={value} onClick={onClick} placeholder="기간을 선택해주세요"></Input>
         {props.InputProps ? (
           props.InputProps.endAdornment
@@ -60,4 +60,5 @@ const CustomInput = React.forwardRef<HTMLElement, Props>(
   }
 );
 
+CustomInput.displayName = "CustomInput";
 export default CustomInput;
