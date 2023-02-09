@@ -1,3 +1,33 @@
+# APT-Tinji-Android
+
+### **TINJI is NFT Marketing Tool**
+
+**Low cost, High performance with Dynamic NFTs.**
+
+Local businesses can attract local customers by airdropping dNFTs. The ads can reach customers 100% by making them swipe the dNFTs to receive them. This way, local businesses can decrease marketing costs and increase their advertising performance. Additionally, users can earn coupon benefits and tokens by viewing the ads.
+
+
+
+<img width="80%" src="https://github.com/Looktab-naer/imgs/blob/main/tinji-apt-4.png"/>
+<img width="80%" src="https://github.com/Looktab-naer/imgs/blob/main/tinji-apt-5.png"/>
+
+## Technology stack
+
+simple_nft3.js : You can make an NFT collection, mint NFTs, and upgrade its data.
+
+simple_nft2.js : Transfering NFT
+
+clean, original code: https://github.com/aptos-labs/aptos-core
+
+
+## Demo
+
+https://tinji-web.vercel.app/
+
+
+# 
+.
+ 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
